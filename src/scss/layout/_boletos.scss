@@ -1,0 +1,83 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor_boletos{
+    background-color: v.$verde;
+    margin-top: 2rem;
+    width: 100%;
+
+
+    h3{
+        color: v.$blanco;
+    }
+    .boletos{
+        @include m.contenedor;
+        @include m.tablet{
+            @include m.grid(2, 5rem);
+
+        }
+    }
+} 
+
+.pase{
+    transition: transform .3s ease-in-out; //Transicion, se aplica al transform, dura 0.3s, tipo de animacion
+    &:hover{
+        transform: scale(1.1);
+    }
+    &-nombre{
+        text-align: center;
+        color: v.$blanco;
+        font-size: 3.5rem;
+        font-weight: 900;
+    
+    }
+   
+    &-header,
+    &-footer{
+        padding: 0.5rem;
+        p{
+            text-align: center;
+            color: v.$blanco;
+            margin: 0;
+        }
+    }
+
+    &-header{
+        background-color: v.$rosa;
+        p{
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            padding: 1rem 0;
+        }
+    }
+
+    &-body{
+        background-color: v.$blanco;
+        ul{
+            @include m.resetear_lista;//Quitar estilos de la lista
+            li{
+                padding: 2rem;
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+    }
+
+    &-footer{
+        background-color: v.$blanco;
+        padding: 3rem;
+
+        p{
+            background-color: v.$morado;
+            font-size: 2.5rem;
+            font-weight: 900;
+            padding: 1rem;
+            border-radius: 3rem;
+
+            cursor: pointer;//Que aparezca la mano
+            &:hover{
+                background-color: darken(v.$morado, 10%);
+                transform: scale(1.05);
+            }
+        }
+    }
+}

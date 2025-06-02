@@ -1,0 +1,61 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.lineup{
+    background-color: v.$rosa;
+    h3, .dia{ //CSS que ambos comparten
+        color: v.$blanco;
+        text-align: center;
+    }
+    .dia{
+        font-size: 3rem;
+        text-transform: uppercase;
+    }
+}
+
+.escenarios_contenedor{
+    @include m.contenedor;
+
+    @include m.tablet{
+        @include m.grid(2, 5rem);
+
+    }
+}
+  
+
+.escenario{
+    padding-top: 3rem;
+    .nombre_escenario{
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform:  uppercase;
+    }
+
+}
+
+.calendario{
+    @include m.resetear_lista;
+    li{
+        padding: 2rem; //Separacion entre items
+        font-weight: 700;
+        span{
+            font-weight: 400;
+        }
+    }
+}
+
+.bg_amarillo{
+    background-color: v.$amarillo;
+    li:nth-child(odd){ //Seleccionamos los li Impares, odd son impares - even son pares
+        background-color: lighten($color: v.$amarillo, $amount: 7%);//Aclarar un color
+    }
+}
+
+.bg_verde{
+    background-color: v.$verde;
+    li:nth-child(odd){ //Seleccionamos los li Impares
+        background-color: lighten($color: v.$verde, $amount: 7%);//Aclarar un color
+    }
+}
+

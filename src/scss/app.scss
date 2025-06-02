@@ -1,0 +1,7 @@
+@forward 'base'; //Importamos todo lo de base para dejar este archivo principal más limpio
+@forward 'layout'; 
+
+
+h1{
+    font-weight: 900;
+}
