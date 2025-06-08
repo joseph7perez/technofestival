@@ -32,7 +32,12 @@
     z-index: 10; //controla la profundidad de un elemento, trae este elemento hacia adeleante
     h2{
         color: v.$blanco;
-        font-size: 7rem;
+        font-size: 4.5rem;
+        @include m.desktop{
+            
+            font-size: 7rem;
+
+        }
         margin: 0;
     }
     p{
@@ -41,7 +46,11 @@
         display: inline-block; //inline-block permite colocarle margin 
         padding: 1rem 2rem;
         margin: 0;
-        font-size: 2.3rem;
+        font-size: 1.8rem;
+        @include m.desktop{
+            font-size: 2.3rem;
+
+        }
         font-weight: 700;
 
     }

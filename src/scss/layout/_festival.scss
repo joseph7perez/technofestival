@@ -10,12 +10,13 @@
 
 .informacion_festival{
 
-    h2{
-        margin-bottom: 1rem ;
-        margin-top: 2rem;
+    .titulo{
+        margin-bottom: .5rem ;
+        // margin-top: 2rem;
+        padding: 0;
     }
     .fecha{
         color: v.$verde;
-        font-weight: 700;
+        font-weight: 700;     
     }
 }
